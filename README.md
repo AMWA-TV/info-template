@@ -14,6 +14,7 @@ This repository holds the source for this Implementation Guide, part of the fami
 ### Why does it matter?
 
 - NMOS Implementation Guides (INFO-xxx) provide guidance for use of NMOS Specifications. 
+  - Implementation Guides are living documents that are updated to reflect changing technologies.
 - This template helps ensure consistency between Implementation Guides.
 - It also helps us test our continuous integration.
 
