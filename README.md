@@ -1,7 +1,7 @@
 # \[Work In Progress\] AMWA INFO-TEMPLATE: Template for NMOS Implementation Guides
 
-[![Lint Status](https://github.com/AMWA-TV/nmos-implementation-guide-template/workflows/Lint/badge.svg)](https://github.com/AMWA-TV/nmos-implementation-guide-template/actions?query=workflow%3ALint)
-[![Render Status](https://github.com/AMWA-TV/nmos-implementation-guide-template/workflows/Render/badge.svg)](https://github.com/AMWA-TV/nmos-implementation-guide-template/actions?query=workflow%3ARender)
+[![Lint Status](https://github.com/AMWA-TV/info-template/workflows/Lint/badge.svg)](https://github.com/AMWA-TV/info-template/actions?query=workflow%3ALint)
+[![Render Status](https://github.com/AMWA-TV/info-template/workflows/Render/badge.svg)](https://github.com/AMWA-TV/info-template/actions?query=workflow%3ARender)
 
 This repository holds the source for this Implementation Guide, part of the family of [Networked Media Open Specifications](https://specs.amwa.tv/nmos) from the [Advanced Media Workflow Association](https://amwa.tv)
 
@@ -22,6 +22,6 @@ This repository holds the source for this Implementation Guide, part of the fami
 
 - It contains [examples of documentation](docs/) useful in Implementation Guides
 - It provides a style guide and other advice for authors
-- Select `AMWA-TV/nmos-implementation-guide-template` as the template when creating the new repo
+- Select `AMWA-TV/info-template` as the template when creating the new repo
 
 <!-- INTRO-END -->
