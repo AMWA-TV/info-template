@@ -1,6 +1,6 @@
 # Style Guide
 
-Implementation Guides are intended to be predominantly task-oriented "how-to" guides, as defined by the top-right quadrant of the Diataxis technical documentation framework, https://diataxis.fr/. Where the Implementation Guide also includes documentation represented by one of the other quadrants in the framework (e.g. understanding-oriented, explanatory documentation), this must exist as a separate section - or multiple separate sections - in the Implementation Guide.
+Implementation Guides are intended to be predominantly task-oriented "how-to" guides, as defined by the top-right quadrant of the Diataxis technical documentation framework, <https://diataxis.fr/>. Where the Implementation Guide also includes documentation represented by one of the other quadrants in the framework (e.g. understanding-oriented, explanatory documentation), this must exist as a separate section - or multiple separate sections - in the Implementation Guide.
 
 The guidance below relates to the "how-to" parts of the Implementation Guide.
 
