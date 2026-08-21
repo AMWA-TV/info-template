@@ -1,0 +1,15 @@
+[project]
+site_name = "AMWA NMOS Informative Document Template"
+site_description = "Template for AMWA NMOS Informative Documents"
+site_url = "https://specs.amwa.tv/info-template/"
+repo_name = "AMWA-TV/info-template"
+repo_url = "https://github.com/AMWA-TV/info-template"
+extra_css = ["stylesheets/extra.css"]
+extra_javascript = ["javascripts/json-viewer.js"]
+
+[project.markdown_extensions.pymdownx.tabbed]
+alternate_style = true
+
+[project.markdown_extensions.toc]
+permalink = false
+
