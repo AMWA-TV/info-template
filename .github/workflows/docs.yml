@@ -8,91 +8,20 @@ on:
   workflow_dispatch:
     inputs:
       ref:
-        description: >-
-          Optional branch or tag to build docs from. Leave empty to build the
-          ref this workflow runs on.
+        description: Optional branch or tag to rebuild
         required: false
         default: ''
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    env:
-      # Publish under /new/ while the Zensical rendering is being evaluated.
-      SPEC_SERVER: specs.amwa.tv
-      SITE_NAME: info-template
-      DOCS_URL: https://specs.amwa.tv/new/info-template
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
-
-      - name: Overlay docs sources from selected ref
-        if: ${{ inputs.ref != '' }}
-        env:
-          INPUT_REF: ${{ inputs.ref }}
-        run: |
-          git checkout "${INPUT_REF}" -- docs/ README.md
-
-      - name: Determine build ref
-        env:
-          INPUT_REF: ${{ inputs.ref }}
-        run: |
-          if [[ -n "${INPUT_REF}" ]]; then
-            BUILD_REF="${INPUT_REF}"
-          else
-            BUILD_REF="${GITHUB_REF_NAME}"
-          fi
-          echo "BUILD_REF=${BUILD_REF}" >> "$GITHUB_ENV"
-          echo "Building docs for ref: ${BUILD_REF}"
-
-      - name: Set up Python
-        uses: actions/setup-python@v6
-        with:
-          python-version: '3.x'
-
-      - name: Install Zensical
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install zensical
-
-      - name: Set up Node.js for RAML rendering
-        uses: actions/setup-node@v5
-        with:
-          node-version: '22'
-
-      - name: Install RAML renderer
-        run: |
-          npm install --prefix "${RUNNER_TEMP}/raml2html" raml2html
-          echo "RAML2HTML_BIN=${RUNNER_TEMP}/raml2html/node_modules/.bin/raml2html" >> "$GITHUB_ENV"
-
-      - name: Prepare docs tree for site build
-        run: ./.github/scripts/prepare-docs.sh
-
-      - name: Build documentation
-        run: zensical build --clean
-
-      - name: Install lychee
-        run: sudo snap install lychee
-
-      - name: Check for broken links
-        continue-on-error: true
-        # The site is checked before upload below this staging prefix, so
-        # root-relative canonical/assets links are not local files yet.
-        run: >-
-          lychee --root-dir ./site --verbose --no-progress
-          --accept '100..=103,200..=299,403'
-          --accept-timeouts './site/**/*.html'
-          --exclude 'new/info-template'
-
-      - name: Upload site to AMWA web server
-        env:
-          SSH_USER: ${{ secrets.SSH_USER }}
-          SSH_HOST: ${{ secrets.SSH_HOST }}
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
-        run: ./.github/scripts/upload-site.sh
+  docs:
+    uses: AMWA-TV/amwa-spec-docs/.github/workflows/docs.yml@main
+    with:
+      versioned: false
+      site-name: info-template
+      public-docs-root: https://specs.amwa.tv/new/info-template
+      source-ref: ${{ inputs.ref || github.ref_name }}
+      toolkit-ref: main
+    secrets: inherit
