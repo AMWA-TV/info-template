@@ -1,7 +1,8 @@
 # \[Work In Progress\] AMWA INFO-TEMPLATE: Template for NMOS Implementation Guides
 
 [![Lint Status](https://github.com/AMWA-TV/info-template/actions/workflows/lint.yml/badge.svg)](https://github.com/AMWA-TV/info-template/actions/workflows/lint.yml)
-[![Render Status](https://github.com/AMWA-TV/info-template/actions/workflows/docs.yml/badge.svg)](https://github.com/AMWA-TV/info-template/actions/workflows/docs.yml)
+[![Zensical Render Status](https://github.com/AMWA-TV/info-template/actions/workflows/docs.yml/badge.svg)](https://github.com/AMWA-TV/info-template/actions/workflows/docs.yml)
+[![Legacy Render Status](https://github.com/AMWA-TV/info-template/workflows/Render/badge.svg)](https://github.com/AMWA-TV/info-template/actions?query=workflow%3ARender)
 [![License](https://img.shields.io/github/license/AMWA-TV/info-template)](https://github.com/AMWA-TV/info-template/blob/HEAD/LICENSE)
 [![Issues](https://img.shields.io/github/issues/AMWA-TV/info-template)](https://github.com/AMWA-TV/info-template/issues)
 
