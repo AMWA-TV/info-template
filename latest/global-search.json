@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "repository": "AMWA-TV/info-template",
+  "documents": [
+    {
+      "title": "AMWA INFO-TEMPLATE: Template for NMOS Implementation Guides",
+      "url": "https://specs.amwa.tv/new/info-template/latest/Overview/",
+      "text": "AMWA INFO-TEMPLATE: Template for NMOS Implementation Guides AMWA INFO-TEMPLATE: Template for NMOS Implementation Guides Introduction AMWA INFO-TEMPLATE: Template for NMOS Implementation Guides - AMWA NMOS Informative Document Template Skip to content AMWA INFO-TEMPLATE: Template for NMOS Implementation Guides (c) AMWA 2021, CC Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) Introduction Write the Implementation Guide using (GitHub Flavoured) Markdown documents. Put diagrams (ideally PNG with encapsulated draw.io source) in the images/ sub-directory. Follow the Style Guide . Make a bulleted list of documents in README.md in this directory. Set the repo name used to get the Lint and Render status in the top-level README.md (four changes needed). Set the value of amwa_id in .render/_config.yml to the AMWA-assigned ID.",
+      "repository": "AMWA-TV/info-template"
+    },
+    {
+      "title": "Style Guide",
+      "url": "https://specs.amwa.tv/new/info-template/latest/Style%20Guide/",
+      "text": "Style Guide Style Guide Overall Style References Style Guide - AMWA NMOS Informative Document Template Skip to content Style Guide Implementation Guides are intended to be predominantly task-oriented \"how-to\" guides, as defined by the top-right quadrant of the Diataxis technical documentation framework, https://diataxis.fr/ . Where the Implementation Guide also includes documentation represented by one of the other quadrants in the framework (e.g. understanding-oriented, explanatory documentation), this must exist as a separate section - or multiple separate sections - in the Implementation Guide. The guidance below relates to the \"how-to\" parts of the Implementation Guide. Overall Style The guide should be as terse as possible. The guide should not contain normative language. The guide should read like a recipe for how to implement the specification. Assume the reader is approaching from the angle of “I have a broadcast device/controller and now want to make it support NMOS”. Give examples. Identify gotchas. References The guide should not simply repeat the specification. The guide can reference widely available resources to aid implementation (for instance nmos-cpp). Do not cut and paste from other sources; provide a reference instead. Do not regurgitate or attempt to paraphrase any passages from the AMWA specifications; reference the relevant passages instead.",
+      "repository": "AMWA-TV/info-template"
+    },
+    {
+      "title": "README",
+      "url": "https://specs.amwa.tv/new/info-template/latest/images/",
+      "text": "README README README - AMWA NMOS Informative Document Template Skip to content README This directory is for images used in documentation",
+      "repository": "AMWA-TV/info-template"
+    },
+    {
+      "title": "[Work In Progress] AMWA INFO-TEMPLATE: Template for NMOS Implementation Guides",
+      "url": "https://specs.amwa.tv/new/info-template/latest/",
+      "text": "[Work In Progress] AMWA INFO-TEMPLATE: Template for NMOS Implementation Guides [Work In Progress] AMWA INFO-TEMPLATE: Template for NMOS Implementation Guides What does it do? Why does it matter? How does it work? [Work In Progress] AMWA INFO-TEMPLATE: Template for NMOS Implementation Guides - AMWA NMOS Informative Document Template Skip to content [Work In Progress] AMWA INFO-TEMPLATE: Template for NMOS Implementation Guides GitHub repository This repository holds the source for this Implementation Guide, part of the family of Networked Media Open Specifications from the Advanced Media Workflow Association What does it do? Provides a template for creating new NMOS Implementation Guides Why does it matter? NMOS Implementation Guides (INFO-xxx) provide guidance for use of NMOS Specifications. Implementation Guides are living documents that are updated to reflect changing technologies. This template helps ensure consistency between Implementation Guides. It also helps us test our continuous integration. How does it work? It contains examples of documentation useful in Implementation Guides It provides a style guide and other advice for authors Select AMWA-TV/info-template as the template when creating the new repo",
+      "repository": "AMWA-TV/info-template"
+    }
+  ]
+}

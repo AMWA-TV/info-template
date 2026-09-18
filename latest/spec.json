@@ -1,0 +1,28 @@
+{
+  "amwa_id": "INFO-TEMPLATE",
+  "url": "https://specs.amwa.tv/info-template",
+  "name": "Template for NMOS Implementation Guides",
+  "status": "Continuing",
+  "repo_name": "info-template",
+  "alt_repo_name": "nmos-implementation-guide-template",
+  "repo_url": "https://github.com/AMWA-TV/info-template",
+  "releases": null,
+  "default_branch": "main",
+  "show_in_index": false,
+  "intro": {
+    "what_does_it_do": [
+      "Provides a template for creating new NMOS Implementation Guides"
+    ],
+    "why_does_it_matter": [
+      "NMOS Implementation Guides (INFO-xxx) provide guidance for use of NMOS Specifications.",
+      "Implementation Guides are living documents that are updated to reflect changing technologies.",
+      "This template helps ensure consistency between Implementation Guides.",
+      "It also helps us test our continuous integration."
+    ],
+    "how_does_it_work": [
+      "It contains [examples of documentation](docs/) useful in Implementation Guides",
+      "It provides a style guide and other advice for authors",
+      "Select `AMWA-TV/info-template` as the template when creating the new repo"
+    ]
+  }
+}
