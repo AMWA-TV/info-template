@@ -7,6 +7,9 @@ repo_url = "https://github.com/AMWA-TV/info-template"
 extra_css = ["stylesheets/extra.css"]
 extra_javascript = ["javascripts/json-viewer.js"]
 
+[project.theme]
+features = ["navigation.footer"]
+
 [project.extra.version]
 provider = "mike"
 
